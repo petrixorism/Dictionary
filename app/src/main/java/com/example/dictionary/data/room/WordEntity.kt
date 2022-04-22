@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "words")
 data class WordEntity(
-    @ColumnInfo(name = "_id")
+    @ColumnInfo(name = "id")
     @PrimaryKey(autoGenerate = true)
     val id: Int,
 
@@ -23,5 +23,8 @@ data class WordEntity(
     val synonym: String,
 
     @ColumnInfo(name = "antonyms")
-    val antonym: String
+    val antonym: String,
+
+    @ColumnInfo(name = "repeat_counst", defaultValue = "0")
+    val repeatCounts: Int
 )

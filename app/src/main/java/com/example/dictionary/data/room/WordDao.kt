@@ -24,5 +24,9 @@ interface WordDao {
     @Query("SELECT * FROM words WHERE en_word LIKE :query")
     fun getWordCursorByQuery(query: String): Cursor
 
+    @Update
+    fun updateWord(word: WordEntity)
+
+
 
 }
