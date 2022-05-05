@@ -17,5 +17,5 @@ class WordsRepository {
 
     fun updateWord(wordEntity: WordEntity) = wordDao.updateWord(wordEntity)
 
-
+    fun insertWord(wordEntity: WordEntity) = wordDao.insertWord(wordEntity)
 }
